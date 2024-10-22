@@ -1,0 +1,8 @@
+.ig>img {  
+    width: 100%; /* 或者指定一个固定的宽度 */  
+    transition: transform 0.5s ease; /* 平滑过渡效果 */  
+}  
+  
+.ig:hover img {  
+    transform: scale(1.3); /* 放大1.1倍 */  
+}

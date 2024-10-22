@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>海底小纵队</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				/* overflow-x: hidden; /* 防止横向滚动 */
+				*/
+			}
+			
+			.main {
+				margin-top: 80px;
+				/* background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(48, 144, 200)); */
+				/* background-color: rgba(21,45,108,100%); */
+
+				min-height: 1500px;
+				/* 设置足够的高度以便滚动 */
+				background-image: url('img/008.png');
+				/* 设置背景图片 */
+				background-position: center center;
+				/* 背景图片居中 */
+				background-repeat: no-repeat;
+				/* 不平铺 */
+				background-size: cover;
+				/* 覆盖整个元素 */
+				background-attachment: fixed;
+				/* 固定背景图片 */
+				/* padding: 20px; */
+				box-sizing: border-box;
+			}
+
+			/* 头部导航栏 */
+			.one {
+				width: 100%;
+				height: 80px;
+				display: flex;
+				background-color: #07193d;
+				position: fixed;
+				top: 0;
+				z-index: 100;
+			}
+
+			/* 	.one>.one_1>img {
+				height: 100%;
+			} */
+
+			.one_1 {
+				margin-left: 200px;
+				color: white;
+				width: 70%;
+				display: flex;
+			}
+
+			.one_1>div>span:hover {
+				color: #2ea1db;
+			}
+
+			.one_1>div {
+				width: 80px;
+				height: 100%;
+				margin-right: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+			}
+			.a1{
+				font-size: 14px;
+				color: white;
+				text-decoration: none;
+			}
+			.a1:hover{
+				color: #2ea1db;
+			}
+			.one_2 {
+				/* background-color: aquamarine; */
+				margin-right: 200px;
+				color: white;
+				width: 30%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+
+			.one_21 {
+				height: 30px;
+				width: 30px;
+				background-image: url(img/搜索0.png);
+				background-size: 30px 30px;
+				margin-right: 50px;
+			}
+			.one_22 {
+				height: 30px;
+				width: 30px;
+				background-image: url(img/我的0.png);
+				background-size: 30px 30px;
+			}
+			.one_21:hover{
+				background-image: url(img/搜索1.png);
+			}
+			.one_22:hover{
+				background-image: url(img/我的1.png);
+			}
+			.two {
+				width: 100%;
+				height: 400px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.two_2>img {
+				width: 100%;
+
+			}
+
+			.three {
+				width: 100%;
+				height: 550px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				/* background-color: antiquewhite; */
+			}
+
+			.three>.three_2>video {
+				height: 100%;
+				width: 100%;
+			}
+
+			.title_1 {
+				width: 100%;
+				height: 100px;
+				/* background-color: aquamarine; */
+				font-size: 40px;
+				font-family: '黑体';
+				color: white;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.four {
+				/* background-color: cornflowerblue; */
+			}
+
+			.four_1 {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.four_11 {
+				margin-left: 10%;
+				background-color: rgb(90, 136, 172);
+				width: 350px;
+				height: 500px;
+				margin-top: 20px;
+
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				/* 平滑过渡效果 */
+				/* 初始阴影（可选），用于模拟浮起效果 */
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.four_11>img {
+				position: relative;
+				right: 20px;
+				bottom: 20px;
+				width: 350px;
+				height: 500px;
+				margin: 0 20px 20px 0;
+				/* height: 100%; */
+			}
+
+			.four_11:hover {
+				/* 放大效果 */
+				transform: scale(1.1);
+				/* 增加阴影，进一步增强浮起效果 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			.four_12 {
+				margin-left: 5%;
+				background-color: rgb(150, 150, 140);
+				width: 350px;
+				height: 500px;
+				margin-top: 20px;
+
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				/* 平滑过渡效果 */
+				/* 初始阴影（可选），用于模拟浮起效果 */
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.four_12>img {
+				margin-left: 5%;
+				/* height: 100%; */
+				position: relative;
+				right: 20px;
+				bottom: 20px;
+				width: 350px;
+				height: 500px;
+				margin: 0 20px 20px 0;
+			}
+
+			.four_12:hover {
+				/* 放大效果 */
+				transform: scale(1.1);
+				/* 增加阴影，进一步增强浮起效果 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			.four_13 {
+				margin-right: 10%;
+				margin-left: 10%;
+				font-size: 30px;
+				background-color: lightskyblue;
+				border-radius: 60px;
+				padding: 10px;
+			}
+
+			.title_2 {
+				width: 100%;
+				height: 30px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.five {
+				/* background-color: darkturquoise; */
+
+			}
+
+			.five_1 {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.five_11 {
+				margin-right: 5%;
+				margin-left: 10%;
+				font-size: 30px;
+				background-color: lightskyblue;
+				border-radius: 60px;
+				padding: 20px;
+			}
+
+			.five_12 {
+				margin-right: 10%;
+				height: 500px;
+				/* margin: 0 auto; */
+				background-color: rgb(30, 64, 56);
+				width: 350px;
+				height: 500px;
+				margin-top: 20px;
+
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				/* 平滑过渡效果 */
+				/* 初始阴影（可选），用于模拟浮起效果 */
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.five_12>img {
+				position: relative;
+				right: 20px;
+				bottom: 20px;
+				width: 350px;
+				height: 500px;
+				margin: 0 20px 20px 0;
+			}
+
+			.five_12:hover {
+				/* 放大效果 */
+				transform: scale(1.1);
+				/* 增加阴影，进一步增强浮起效果 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			.five_13 {
+				margin-right: 10%;
+				/* margin: 0 auto; */
+				background-color: rgb(22, 33, 45);
+				width: 350px;
+				height: 500px;
+				margin-top: 20px;
+
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				/* 平滑过渡效果 */
+				/* 初始阴影（可选），用于模拟浮起效果 */
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.five_13>img {
+				position: relative;
+				right: 20px;
+				bottom: 20px;
+				width: 350px;
+				height: 500px;
+				margin: 0 20px 20px 0;
+			}
+
+			.five_13:hover {
+				/* 放大效果 */
+				transform: scale(1.1);
+				/* 增加阴影，进一步增强浮起效果 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			.six {
+				/* background-color: dodgerblue; */
+				;
+			}
+
+			.six_1 {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+
+			.six_11 {
+				margin-left: 10%;
+				height: 500px;
+				/* margin: 0 auto; */
+				background-color: rgb(20, 131, 186);
+				width: 350px;
+				height: 500px;
+				margin-top: 20px;
+
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				/* 平滑过渡效果 */
+				/* 初始阴影（可选），用于模拟浮起效果 */
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.six_11>img {
+				position: relative;
+				right: 20px;
+				bottom: 20px;
+				width: 350px;
+				height: 500px;
+				margin: 0 20px 20px 0;
+			}
+
+			.six_11:hover {
+				/* 放大效果 */
+				transform: scale(1.1);
+				/* 增加阴影，进一步增强浮起效果 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			.six_12 {
+				margin-right: 8%;
+				margin-left: 10%;
+				font-size: 30px;
+				background-color: lightskyblue;
+				border-radius: 60px;
+				padding: 10px;
+			}
+
+			.six_13 {
+				margin-right: 10%;
+				/* margin: 0 auto; */
+				background-color: rgb(53, 118, 156);
+				width: 350px;
+				height: 500px;
+				margin-top: 20px;
+
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				/* 平滑过渡效果 */
+				/* 初始阴影（可选），用于模拟浮起效果 */
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.six_13>img {
+				position: relative;
+				right: 20px;
+				bottom: 20px;
+				width: 350px;
+				height: 500px;
+				margin: 0 20px 20px 0;
+
+
+			}
+
+			.six_13:hover {
+				/* 放大效果 */
+				transform: scale(1.1);
+				/* 增加阴影，进一步增强浮起效果 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			.seven {
+				width: 100%;
+				height: 550px;
+
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				/* background-color: antiquewhite; */
+			}
+
+			.seven>.seven_2>video {
+				height: 100%;
+				width: 100%;
+			}
+
+			.seven_1 {
+				margin-left: 10%;
+				font-size: 30px;
+				color: white;
+			}
+
+			.seven_3 {
+				margin-right: 10%;
+				font-size: 30px;
+				color: white;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			
+			.slideshow-container {
+				max-width: 1000px;
+				position: relative;
+				margin: auto;
+			}
+			
+			.mySlides {
+				display: none;
+			}
+			
+			.fade {
+				animation-name: fade;
+				animation-duration: 1.5s;
+			}
+			
+			@keyframes fade {
+				from {
+					opacity: .4
+				}
+			
+				to {
+					opacity: 1
+				}
+			}
+			/* 导航按钮样式 */
+			.prev,
+			.next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				padding: 16px;
+				margin-top: -22px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+			}
+			
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+			
+			.prev:hover,
+			.next:hover {
+				background-color: rgba(0, 0, 0, 0.8);
+			}
+			
+			/* 圆点指示器 */
+			.dot {
+				cursor: pointer;
+				height: 15px;
+				width: 15px;
+				margin: 0 2px;
+				background-color: #bbb;
+				border-radius: 50%;
+				display: inline-block;
+				transition: background-color 0.6s ease;
+			}
+			
+			.active,
+			.dot:hover {
+				background-color: #717171;
+			}
+			.nine {
+				height: 100px;
+				font-size: 30px;
+				color: white;
+				background-color: rgb(50, 50, 50);
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.nine_2 {
+				/* height:80px; */
+				width: 100px;
+				background-color: #015fa3;
+				font-size: 25px;
+				line-height: 40px;
+
+				text-align: center;
+				cursor: pointer;
+				float: right;
+			}
+		</style>
+	</head>
+	<body style="height: 4000px;">
+		<div class="main">
+			<div class="one">
+				<div class="one_1">
+					<!-- <img src="https://img0.baidu.com/it/u=2033364605,3004222071&fm=253&fmt=auto&app=138&f=JPEG?w=300&h=300" /> -->
+					<div><span><a href="" class="a1">海底小纵队</a></span></div>
+					<div><span><a href="./首页.html" class="a1">首页</a></span></div>
+					<div><span><a href="" class="a1">海洋污染</a></span></div>
+					<!-- <a href="https://www.vmall.com/portal/activity/index.html?pn=zhixuanpc">华为</a> -->
+					<div><span><a href="./志愿服务.html" class="a1">志愿服务</a></span></div>
+					<div><span><a href="./检测系统.html" class="a1">检测系统</a></span></div>
+				</div>
+				<div class="one_2">
+					<a href="" class="a2"><div class="one_21"></div></a>
+					<a href="" class="a3"><div class="one_22"></div></a>
+					<!-- <div class="one_23"></div> -->
+				</div>
+			</div>
+			<div class="two">
+				<div class="two_1"></div><!-- style="width:10%;" -->
+				<div class="two_2" style="width:100%; height: 400px;"><img src="img/塑料污染.jpg" /></div>
+				<div class="two_3"></div>
+
+			</div>
+			<div class="three">
+				<div class="three_1" style="width:20%;"></div>
+				<div class="three_2" style="width:60%;">
+					<video src="video/海洋污染.mp4" controls="controls" autoplay="true"></video>
+				</div>
+				<div class="three_3" style="width:20%;"></div>
+			</div>
+			<div class="title_1">
+				保护海洋环境，刻不容缓！！！
+			</div>
+			<div class="four">
+				<div class="four_1">
+					<div class="four_11">
+						<img src="img/001.jpg" />
+					</div>
+					<div class="four_12">
+						<img src="img/003.jpg" />
+					</div>
+					<div class="four_13">
+						<span>保护环境，从小事做起!</span>
+					</div>
+				</div>
+				<div class="four_2">
+
+				</div>
+			</div>
+			<div class="title_2">
+
+			</div>
+			<div class="five">
+				<div class="five_1">
+					<div class="five_11">
+						<span>请扯下让我窒息的面罩</span><br /><br />
+						<span>每一只塑料袋，都有可能是杀害海洋生物的致命武器。</span><br />
+						<span>不要让你曾经使用的塑料，永远折磨着海洋。</span>
+					</div>
+					<div class="five_12">
+						<img src="img/004.jpg" />
+					</div>
+					<div class="five_13">
+						<img src="img/005.jpg" />
+					</div>
+				</div>
+				<div class="five_2">
+
+				</div>
+			</div>
+			<div class="title_2">
+
+			</div>
+			<div class="six">
+				<div class="six_1">
+					<div class="six_11">
+						<img src="img/006.jpg" />
+					</div>
+					<div class="six_12">
+						<span>请拯救我们的海洋！</span>
+					</div>
+					<div class="six_13">
+						<img src="img/007.jpg" />
+					</div>
+				</div>
+				<div class="six_2">
+
+				</div>
+			</div>
+			<div class="seven">
+				<div class="seven_1" style="width:10%;">日本排放核污水!</div>
+				<div class="seven_2" style="width:80%;height:100%;">
+					<video src="video/核污水.mp4" controls="controls" autoplay="true"></video>
+				</div>
+				<div class="seven_3" style="width:10%;">严重威胁人类安全</div>
+			</div>
+			<div class="title_2">
+
+			</div>
+			<div class="eight">
+				<div class="mySlides fade">
+					<img src="img/009.jpg" style="width:100%;height:800px;">
+				</div>
+				
+				<div class="mySlides fade">
+					<img src="img/010.jpg" style="width:100%;height:800px;">
+				</div>
+				
+				<div class="mySlides fade">
+					<img src="img/011.jpg" style="width:100%;height800px;">
+				</div>
+				
+				<!-- 添加一些导航按钮 -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			
+			<div class="nine">
+				<div class="nine_1">保护海洋就是保护我们自己！欢迎加入我们的志愿者队伍，益起守护那片海！</div>
+				<div class="nine_2">加入</div>
+			</div>
+		<!-- 	<div class="ten">
+
+			</div> -->
+		</div>
+		<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);  
+			  
+			// 自动播放功能（可选）  
+			setInterval(function() {  
+			    plusSlides(1);  
+			}, 3000); // 每3秒切换到下一张图片  
+			  
+			function plusSlides(n) {  
+			    showSlides(slideIndex += n);  
+			}  
+			  
+			function currentSlide(n) {  
+			    showSlides(slideIndex = n);  
+			}  
+			  
+			function showSlides(n) {  
+			    let slides = document.getElementsByClassName("mySlides");  
+			    let dots = document.getElementsByClassName("dot");  
+			    if (n > slides.length) {slideIndex = 1}      
+			    if (n < 1) {slideIndex = slides.length}  
+			    for (let i = 0; i < slides.length; i++) {  
+			        slides[i].style.display = "none";    
+			    }  
+			    for (let i = 0; i < dots.length; i++) {  
+			        dots[i].className = dots[i].className.replace(" active", "");  
+			    }  
+			    slides[slideIndex-1].style.display = "block";    
+			    dots[slideIndex-1].className += " active";  
+			}
+		</script>
+	</body>
+</html>

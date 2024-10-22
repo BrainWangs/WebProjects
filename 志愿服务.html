@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/志愿服务.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	</head>
+	<body>
+		<!-- 头部导航栏 -->
+		<div class="head">
+			<!-- 左边 -->
+			<div class="head_left">
+				<div class="head_left_div"><a href="">海底小纵队</a></div>
+				<div class="head_left_div"><a href="./首页.html">首页</a></div>
+				<div class="head_left_div"><a href="./海洋污染.html">海洋污染</a></div>
+				<div class="head_left_div"><a href="">志愿服务</a></div>
+				<div class="head_left_div"><a href="./检测系统.html">检测系统</a></div>
+			</div>
+			<!-- 右边 -->
+			<div class="head_right">
+				<a href=""><div class="head_right_div1"></div></a>
+				<a href=""><div class="head_right_div2"></div></a>
+			</div>
+		</div>
+		<!-- 主体内容 -->
+		<div class="main">
+			<!-- 轮播图 -->
+			<div class="carousel" id="carousel">
+				<div class="carousel-inner">
+					<div class="item">
+						<img src="https://www.broc.org.cn/data/upload/image/202106/91c1509177665d6cefd6cbdbb31d7ed3.jpg"
+							style="background-color: pink;">
+					</div>
+					<div class="item">
+						<img src="https://www.broc.org.cn/data/upload/image/202207/7e8d3c20beb6bd04b8f7d94c6e05c6a4.jpg"
+							style="background-color: bisque;">
+					</div>
+					<div class="item">
+						<img src="	https://www.broc.org.cn/data/upload/image/202207/4ecc2fc01217dedda9df0cef0879613b.jpg"
+							style="background-color: rgb(144, 255, 236);">
+					</div>
+					<div class="item">
+						<img src="https://www.broc.org.cn/data/upload/image/202204/a7d3b206acae89c3e28546ead5f95476.jpg"
+							style="background-color: rgb(248, 99, 124);">
+					</div>
+					<div class="item">
+						<img src="https://www.broc.org.cn/data/upload/image/202202/034d51e70d8892a4e1687d1f67c008da.jpg"
+							style="background-color: rgb(210, 161, 250);">
+					</div>
+				</div>
+				<div class="carousel-control left" onclick="prevSlide()">&lsaquo;</div>
+				<div class="carousel-control right" onclick="nextSlide()">&rsaquo;</div>
+
+				<div class="dots">
+					<li class="active" onclick="jumpToSlide(0)"></li>
+					<li onclick="jumpToSlide(1)"></li>
+					<li onclick="jumpToSlide(2)"></li>
+					<li onclick="jumpToSlide(3)"></li>
+					<li onclick="jumpToSlide(4)"></li>
+				</div>
+			</div>
+			<!-- 志愿服务 -->
+			<div class="volunteer">
+				<!-- 志愿服务标题 -->
+				<div class="volunteer_title">
+					<p class="volunteer_title_p1">志愿活动</p>
+					<hr />
+					<p class="volunteer_title_p2">To contribute to the protection of the ocean</p>
+				</div>
+
+				<!-- 志愿服务内容 -->
+				<div class="volunteer_contain">
+					<div class="activity" id="activity1">
+						<div class="activity_img">
+							<img class="" src="img/志愿活动1.jpg" />
+						</div>
+						<div class="activity_text">
+							<p>2024世界海洋日 | “守护珊瑚海”计划启动</p>
+							<button>更多+</button>
+						</div>
+					</div>
+					<div class="activity"  id="activity2">
+						<div class="activity_img">
+							<img class="" src="img/志愿活动2.jpg" />
+						</div>
+						<div class="activity_text">
+							<p>清洁无人海岛 | 与海共话 守护这片蓝</p>
+							<button>更多+</button>
+						</div>
+					</div>
+					<div class="activity"  id="activity3">
+						<div class="activity_img">
+							<img class="" src="img/志愿活动3.jpg" />
+						</div>
+						<div class="activity_text">
+							<p>​守护东亚江豚：“微笑天使”被困网具，获救后“恋恋不舍”告别</p>
+							<button>更多+</button>
+						</div>
+					</div>
+					<div class="activity"  id="activity4">
+						<div class="activity_img">
+							<img class="" src="img/志愿活动4.jpg" />
+						</div>
+						<div class="activity_text">
+							<p>为蓝行动 | 和孩子们一起守护红树林</p>
+							<button>更多+</button>
+						</div>
+					</div>
+				</div>
+				<!-- 网站介绍 -->
+				<div class="introduce">
+					<!-- 网站介绍标题 -->
+					<div class="introduce_title">
+						<p class="introduce_title_p1">网站介绍</p>
+						<hr />
+						<p class="introduce_title_p2">Protect marine environment and promote marine culture</p>
+					</div>
+					<!-- 网站介绍内容 -->
+					<div class="introduce_contain">
+						<div class="introduce_contain_son">
+							<div class="introduce_contain_div1">
+								<div id="introduce_1" class="introduce_a">
+									<img src="img/事件.png" />
+									<h2 style="margin-bottom: 10px;color: aliceblue;font-weight: 400;">大事件</h2>
+									<p>1月9日-11日，第三届厦门海洋环境开放科学大会在厦门大学举行，蓝丝带海洋保护协会受邀参与。于1月12日， 协会工作人员张菁华在海洋公众教育特别专场发表分享
+									</p>
+									<button style="margin-top: 40px;">了解更多</button>
+								</div>
+							</div>
+
+							<div class="introduce_contain_div2">
+								<div class="introduce_contain_div2_top">
+									<div id="introduce_2" class="introduce_a">
+										<img src="img/章程.png" />
+										<h2 style="margin-bottom: 10px;color: aliceblue;font-weight: 400;">协会章程</h1>
+											<p>努力为海洋做贡献，努力为海洋做贡献，努力为海洋做贡献</p>
+											<button style="margin-top: 20px;">了解更多</button>
+									</div>
+								</div>
+								<div class="introduce_contain_div2_bottom">
+									<div id="introduce_3" class="introduce_a">
+										<img src="img/荣誉.png" />
+										<h2 style="margin-bottom: 10px;color: aliceblue;font-weight: 400;">协会荣誉</h1>
+											<p>一身荣誉列不完,一身荣誉列不完，一身荣誉列不完</p>
+											<button style="margin-top: 20px;">了解更多</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="introduce_contain_div3">
+								<div id="introduce_4" class="introduce_a">
+									<img src="img/专家.png" />
+									<h2 style="margin-bottom: 10px;color: aliceblue;font-weight: 400;">专家</h2>
+									<p>1月9日-11日，第三届厦门海洋环境开放科学大会在厦门大学举行，蓝丝带海洋保护协会受邀参与。</p>
+									<button style="margin-top: 40px;">了解更多</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 合作伙伴 -->
+				<div class="hezuo">
+					<!-- 合作伙伴标题 -->
+					<div class="hezuo_title">
+						<p class="hezuo_title_p1">合作伙伴</p>
+						<hr />
+						<p class="hezuo_title_p2">One more partner, one more helping hand</p>
+					</div>
+					<!-- 合作伙伴内容 -->
+					<div class="hezuo_contain">
+						<!-- 轮播图 -->
+						<!-- Swiper -->
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="img/腾讯.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./img/字节跳动.webp" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./img/阿里.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./img/华为.webp" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./img/小米.jpg" alt="" />
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="hezuo_contain_bottom"></div>
+					</div>
+				</div>
+				<!-- 底部 -->
+				<div class="footer">
+					<div class="footer_top">
+						<li>
+							<a href="https://weibo.com/newlogin?url=https%3A%2F%2Fweibo.com%2F">
+								<img src="https://www.broc.org.cn/template/default/images/images/w1.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="https://weibo.com/newlogin?url=https%3A%2F%2Fweibo.com%2F">
+								<img src="https://www.broc.org.cn/template/default/images/images/w2.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="https://im.qq.com/index/">
+								<img src="https://www.broc.org.cn/template/default/images/images/w4.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="https://mail.qq.com/">
+								<img src="https://www.broc.org.cn/template/default/images/images/w3.jpg">
+							</a>
+						</li>
+					</div>
+					<div class="footer_center">
+						<p>协会网址：http://www.ch-blueocean.org/ </p>
+						<p>微信公众号：蓝丝带海洋保护协会</p>
+						<p>电子邮件：broca@ch-blueocean.org</p>
+						<p id="p1">区域办事处地址及联系方式：</p>
+						<p>海南省三亚市天涯区解放三路12号建行大厦2楼（三亚办公室） 0898-88980608</p>
+						<p>海南省海口市国贸大道1号景瑞大厦21层  （海口办公室） 0898-68591002</p>
+						<p>山东省青岛市城阳区环城北路保利观堂东12-2-102（青岛办公室） 0532-84840708</p>
+						<p>北京市西城区西单大木仓胡同33号院（北京办公室）</p>
+					</div>
+					<div class="footer_bottom">
+						版权所有： 蓝丝带海洋保护协会   琼ICP备08101202号-5
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- js -->
+		<!-- 轮播图js -->
+		<script src="js/志愿服务.js"></script>
+
+		<!-- 合作伙伴轮播图js -->
+		<script src="js/swiper-bundle.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: 3,
+				spaceBetween: 30,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+			});
+		</script>
+	</body>
+
+</html>

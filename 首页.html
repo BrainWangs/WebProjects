@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>海底小纵队</title>
+	<link rel="stylesheet" href="swiper-bundle.css">
+	<link rel="stylesheet" href="hover.css">
+	<link rel="stylesheet" href="70.css">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.main{
+			/* background-color: aqua; */
+			height: 100vh;
+			width: 100%;
+			flex-direction: column;
+			margin-top: 80px;
+		}
+		
+		.top{
+			height: 80px;
+			width: 100%;
+
+			
+		}
+		
+			
+		
+		/* 头部导航栏 */
+		.head {
+			width: 100%;
+			/* background-color: antiquewhite; */
+			height: 80px;
+			display: flex;
+			background-color: #07193d;
+			position: fixed;
+			top: 0;
+			z-index: 99999;
+		}
+		a{
+			font-size: 14px;
+			color: white;
+			text-decoration: none;
+		}
+		a:hover{
+			color: #2ea1db;
+		}
+		.head_left {
+			/* background-color: aqua; */
+			margin-left: 200px;
+			color: white;
+			width: 70%;
+			display: flex;
+		}
+		
+		.head_left_div {
+			width: 80px;
+			height: 100%;
+			margin-right: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		
+		}
+		.head_left_div:hover{
+			color:red;
+		}
+		
+		.head_right {
+			/* background-color: aquamarine; */
+			margin-right: 200px;
+			color: white;
+			width: 30%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		
+		.head_right_div1 {
+			height: 30px;
+			width: 30px;
+			background-image: url('img/搜索0.png');
+			background-size: 30px 30px;
+			margin-right: 50px;
+		}
+		.head_right_div1:hover{
+			background-image: url('img/搜索1.png');
+		}
+		
+		.head_right_div2 {
+			height: 30px;
+			width: 30px;
+			background-image: url('img/我的0.png');
+			background-size: 30px 30px;
+		}
+		.head_right_div2:hover{
+			background-image: url('img/我的1.png');
+		}
+		.middle{
+			height: 3700px;
+			width: 100%;
+			/* background-color: red; */
+			display:flex;
+			flex-direction: column;
+			flex-start;
+			/* justify-content: center; */
+		}
+		.swiper{
+			height: 700px;
+			width: 100%;
+		}
+		.swiper-slide>img{
+			height: 100%;
+			width: 100%;
+		}
+		.swiper-slide>video{
+			height: 100%;
+			width: 100%;
+		}
+		.swiper-slide{
+			height: 750px;
+				width: 100%;
+		}
+		.important{
+			/* background-image: url('img/sea.jpg'); */
+			/* background-color:red; */
+			width:100%;
+			height:3000px;
+			background-size: cover;
+			background: linear-gradient(to bottom,rgb(255, 255, 255),rgb(85, 170, 255));
+			display:flex;
+			flex-direction: column;
+			
+		}
+		.ig>img{
+			width:500px;
+			height:500px;
+			margin: 50px 80px 60px 150px;
+			transition: transform 0.5s ease; 
+			
+			
+			 				
+		}
+		.ig>img:hover img {
+		    transform: scale(1.1); /* 放大1.1倍 */  
+		}
+		.ig{
+			width:750px;
+			height:700px;
+			
+		}
+		.im{
+			width:100%;
+			height:700px;
+			display:flex;
+			flex-direction: row;
+		}
+		/* .im2{
+			width:100%;
+			height:800px;
+			display:flex;
+			flex-direction: row;
+		} */
+		.text{
+			width:500px;
+			height:500px;
+			margin: 120px 80px 60px 50px;
+			
+			
+			
+		}
+		.text>span{
+			font-family:微软雅黑 ;
+			font-size: 25px;
+			font-weight: bold;
+		}
+		.title{
+			width:100%;
+			height:100px;
+			/* margin: 20px 400px 20px 600px; */
+			display:flex;
+			justify-content: center;
+			text-align: center;
+		}
+		.title>span{
+			font-family:微软雅黑 ;
+			font-size: 40px;
+			font-weight: bold;
+			color:rgb(0, 170, 255);
+			text-align: center;
+		}
+		.bottom{
+			background-image:url('img/水1.jpg') ;
+			height:3000px;
+			width:100%;
+			background-size:cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position: center;
+			display:flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		.nine {
+			height: 100px;
+			font-size: 30px;
+			color: white;
+			background-color: rgb(50, 50, 50);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.nine_2 {
+			/* height:80px; */
+			width: 100px;
+			background-color: #015fa3;
+			font-size: 25px;
+			line-height: 40px;
+		
+			text-align: center;
+			cursor: pointer;
+			float: right;
+		}
+		
+		/* .fish{
+			width:100%;
+			height:1000px;
+			display:flex;
+			flex-direction: row;
+			justify-content:space-around;
+		}
+		.fish1{
+			width:500px;
+			height:500px;
+			
+		}
+		.fish1>img{
+			width:300px;
+			height:300px;
+			margin: 100px 100px 100px 100px;
+		}
+		.fish2{
+			width:500px;
+			height:500px;
+		}
+		.fish2>img{
+			width:300px;
+			height:300px;
+			margin: 100px 100px 100px 100px;
+		} */
+		
+	</style>
+</head>
+<body>
+	<script src="swiper-bundle.js"></script>
+	<div class="main">
+		<!-- <div class="blank">
+			
+		</div>
+		<div class="top">
+			<img src="https://res.vmallres.com/portal/1.24.6.300/h5/images/logo_app.png"/>
+			<div class="classify">
+				<img src="img/分类.png"/>
+				<div class="nav"><span> 全部分类</span></div>
+				<div class="nav"><span> 首页</span></div>
+				<div class="nav"><span> 海洋污染</span></div>
+				<div class="nav"><span> 志愿活动</span></div>
+				<div class="nav"><span> 监测系统</span></div>
+			
+			</div> -->
+			<!-- <div class="search">
+				<img src="img/搜索_o.png">
+				<img src="img/用户 (2).png">
+				<img src="img/购物车 (2).png">
+				
+			</div>
+		</div> -->
+		<!-- 头部导航栏 -->
+			<div class="head">
+				<!-- 左边 -->
+				<div class="head_left">
+					<div class="head_left_div"><a href="">海底小纵队</a></div>
+					<div class="head_left_div"><a href="">首页</a></div>
+					<div class="head_left_div"><a href="./海洋污染.html">海洋污染</a></div>
+					<div class="head_left_div"><a href="./志愿服务.html">志愿服务</a></div>
+					<div class="head_left_div"><a href="./检测系统.html">检测系统</a></div>
+				</div>
+				<!-- 右边 -->
+				<div class="head_right">
+					<a href=""><div class="head_right_div1"></div></a>
+					<a href=""><div class="head_right_div2"></div></a>
+				</div>
+			</div>
+		<div class="middle">
+			<div class="swiper">
+			    <div class="swiper-wrapper">
+					<!-- <div class="swiper-slide"> <video src="MP4/海底小纵队.mp4"controls auto play> </video></div> -->
+			        <div class="swiper-slide"><img src="img/hai1.jpg"/></div>
+			        <div class="swiper-slide"><img src="img/hai2.jpg"/></div>
+			        <div class="swiper-slide"><img src="img/dolphin.jpg"/></div>
+					<div class="swiper-slide"><img src="img/hai3.jpg"/></div>
+					<div class="swiper-slide"><img src="img/shark.jpg"/></div>
+					<div class="swiper-slide"><img src="img/fish.jpg"/></div>
+			    </div>
+			    <!-- 如果需要分页器
+			    <div class="swiper-pagination"></div>
+			    
+			    <!-- 如果需要导航按钮 -->
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+			    
+			    <!-- 如果需要滚动条 -->
+			   <!-- <div class="swiper-scrollbar"></div> -->
+			</div>
+			<script>        
+			  var mySwiper = new Swiper ('.swiper', {
+			    /* direction: 'vertical', // 垂直切换选项 */
+				autoplay: true,
+			    loop: true, // 循环模式选项
+			    
+			    // 如果需要分页器
+			    pagination: {
+			      el: '.swiper-pagination',
+			    },
+			    
+			    // 如果需要前进后退按钮
+			    navigation: {
+			      nextEl: '.swiper-button-next',
+			      prevEl: '.swiper-button-prev',
+			    },
+			    
+			    // 如果需要滚动条
+			    scrollbar: {
+			      el: '.swiper-scrollbar',
+			    },
+			  })        
+			</script>
+			
+			<div class="important">
+				<div class="title">
+					<span>海洋环保科普</span>
+				</div>
+				<div class="im">
+					<div class="ig"> 
+						<img src="img/im1.jpg">
+					</div>
+					<div class="text">
+						<span>海洋是地球的主体、生命的摇篮、人类文明的源泉。
+						地球表面分属为陆地和海洋。如以大地水准面为基准，陆地面积占地表总面积的29.2％；海洋面积占地表总面积的70.8％。
+						海陆面积之比为2.5：1。世界大洋通常被分为四大部分，即太平洋、大西洋、印度洋和北冰洋。
+						浩瀚的海洋蕴藏着十分丰富的海洋生物资源，有人推算，海洋向人类提供食物的能力，相当于全世界陆地耕地面积所提供食物的1000 倍。
+						</span>
+					</div>
+				</div>
+				<div class="im">
+					
+					<div class="text">
+						<span>中国位于亚洲大陆的东南部，雄踞北太平洋西侧，大陆岸线总长度达1.8万公里之多，主张管辖海域面积约300万平方公里。
+						邻近海域陆架宽阔，地形复杂，纵跨温带、副热带和热带三个气候带，四季交替明显，沿岸径流多变，因而具有独特的区域海洋学特征。
+						我国海洋生物多样性丰富，近岸海域具有红树林、珊瑚礁、滨海湿地、海草床、海岛、海湾、入海河口等多种类型海洋生态系统。
+						</span>
+					</div>
+					<div class="ig">
+						<img src="img/beach.jpg">
+					</div>
+					
+				</div>
+				<div class="im">
+					<div class="ig">
+						<img src="img/im3.jpg">
+					</div>
+					<div class="text">
+						<span>海洋生态系统是全球最重要的生态系统，影响着全球生态系统的稳定与安全。
+						人类生存及其经济、政治、文化和社会发展均与海洋息息相关。
+						海洋生态环境在支撑社会经济发展的同时，承受着巨大的压力。
+						</span>
+					</div>
+					
+				</div>
+				<div class="im">
+					
+					<div class="text">
+						<span>海洋污染是海洋环境一个突出的问题。
+						1982 年联合国海洋法公约对海洋污染定义为：“人类直接或间接把物质或能量引入海洋环境，
+						其中包括河口港湾，以至造成或可能造成损害生物资源和海洋生物，危害人类健康，
+						妨碍包括捕鱼和海洋其它正当用途在内的各种海洋活动，损坏海水使用质量和伤及环境美观等有害影响”。
+						按此定义，海洋污染物指的是污染海洋的物质或能量，如石油及其炼制品、重金属、农药、放射性物质、热废水、固体废弃物、病原生物等等。
+						</span>
+					</div>
+					<div class="ig">
+						<img src="img/im4.jpg">
+					</div>
+					
+				</div>
+				<div class="im">
+				</div>
+				
+				
+			</div>	
+		</div>
+		<div class="bottom">
+			<div class="fish">
+			
+				<div class="fish1">
+					<img src="img/海蜇 (2).jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>海蜇</h2>
+					        <p>海蜇，是海洋中营浮游生活的根口水母目根口水母科海蜇属暖水性大型水母。</p>
+					    </div>
+					</div>
+				</div>
+				
+				<div class="fish2">
+					<img src="img/海豹.jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>海豹</h2>
+					        <p>海豹是食肉目海豹科动物的统称。身体肥胖而圆，体形呈纺锤状，四肢变为鳍状。</p>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="fish">	
+				<div class="fish1">
+					<img src="img/大鸬鹚.jpg"  >
+					<div class="text-box">
+					    <div>
+					        <h2>大鸬鹚</h2>
+					        <p>鸬鹚是鲣鸟目鸬鹚科鸬鹚属的鸟类，别名鱼鹰或水老鸦。身体呈流线型，翅宽长且钝。</p>
+					    </div>
+					</div>
+				</div>
+				<div class="fish2">
+					<img src="img/灰礁鲨.jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>灰礁鲨</h2>
+					        <p>灰鲭鲨，是脊索动物门鱼纲鲭鲨目鲭鲨科鲭鲨属鱼类。</p>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="fish">
+				<div class="fish1">
+					<img src="img/黄貂鱼.jpg"  >
+					<div class="text-box">
+					    <div>
+					        <h2>刺鳐</h2>
+					        <p>刺鳐，俗称黄貂鱼，是软骨鱼类，它们的身体扁平，尾巴细长。</p>
+					    </div>
+					</div>
+				</div>
+				<div class="fish2">
+					<img src="img/黑鳍鲨.jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>乌翅真鲨</h2>
+					        <p>乌翅真鲨，是真鲨目真鲨科真鲨属水生动物。分布于中国的东海和南海。</p>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="fish">
+				<div class="fish1">
+					<img src="img/长角牛鱼.jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>角箱鲀</h2>
+					        <p>角箱鲀 ，又称海牛、海鸟、风车鱼。是鲀形目箱鲀科箱鲀属暖水性近海底层鱼类。</p>
+					    </div>
+					</div>
+				</div>
+				<div class="fish2">
+					<img src="img/柠檬蝴蝶鱼.jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>蝴蝶鱼</h2>
+					        <p>蝴蝶鱼是蝴蝶鱼科蝴蝶鱼属鱼类。分布于大西洋、印度洋和太平洋海域</p>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="fish">
+				<div class="fish1">
+					<img src="img/海蜗牛.jpg"  >
+					<div class="text-box">
+					    <div>
+					        <h2>海蜗牛</h2>
+					        <p>海蜗牛是中腹足目海蜗牛科海蜗牛属的软体动物。贝壳略呈马蹄形，壳长约30毫米。</p>
+					    </div>
+					</div>
+				</div>
+				<div class="fish2">
+					<img src="img/海葵.jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>海葵</h2>
+					        <p>海葵，是海葵目的海洋刺胞动物。连最低级的大脑基础也没有，并有着各种各样的颜色。</p>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="fish">
+				<div class="fish1">
+					<img src="img/狮子鱼.jpg"  >
+					<div class="text-box">
+					    <div>
+					        <h2>蓑鲉</h2>
+					        <p>蓑鲉，是鲉形目鲉科蓑鲉属鱼类。蓑鲉体形修长，有红色或暗色的条带。</p>
+					    </div>
+					</div>
+				</div>
+				<div class="fish2">
+					<img src="img/慈鲷.jpg" >
+					<div class="text-box">
+					    <div>
+					        <h2>慈鲷</h2>
+					        <p>慈鲷是鲈形目慈鲷科鱼类。鱼体呈椭圆形，侧扁，背部轮廓隆起。</p>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="fish">
+				<div class="fish1">
+					<img src="img/海蜇.jpg"  >
+				</div>
+				<div class="fish2">
+					<img src="img/海蜇.jpg" >
+				</div>
+			</div> -->
+		</div>
+		<div class="nine">
+			<div class="nine_1">保护海洋就是保护我们自己！欢迎加入我们的志愿者队伍，益起守护那片海！</div>
+			<div class="nine_2">加入</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
